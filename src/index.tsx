@@ -1,9 +1,11 @@
-import r2wc from "@r2wc/react-to-web-component"
-import App from "./App"
+import React from 'react';
+import './index.css';
+import r2wc from '@r2wc/react-to-web-component';
+import { Banner } from './components/banner';
 
-const HelloWC = r2wc(App, {
-  props: { name: "string" },
-})
+const BannerWC = r2wc(Banner, {
+  props: { text: 'string' },
+});
 
 
 const Button: React.FC<{
@@ -16,5 +18,5 @@ const HelloButton = r2wc(Button, {
   props: { text: "string" },
 })
 
-customElements.define("hello-wc", HelloWC)
 customElements.define("hello-button", HelloButton)
+customElements.define('banner-wc', BannerWC);
