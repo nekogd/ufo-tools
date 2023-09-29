@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/static/js/main.ffe11ef7.js",
-    "index.html": "/index.html",
-    "main.ffe11ef7.js.map": "/static/js/main.ffe11ef7.js.map"
+    "main.js": "/ufo-tools/static/js/main.ffe11ef7.js",
+    "index.html": "/ufo-tools/index.html",
+    "main.ffe11ef7.js.map": "/ufo-tools/static/js/main.ffe11ef7.js.map"
   },
   "entrypoints": [
     "static/js/main.ffe11ef7.js"
