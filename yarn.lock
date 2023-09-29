@@ -1654,6 +1654,18 @@
     schema-utils "^3.0.0"
     source-map "^0.7.3"
 
+"@r2wc/core@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@r2wc/core/-/core-1.0.0.tgz#5724bf472769ffe4157528bd10f62b9aada36098"
+  integrity sha512-P/P1YXpCXESnJKxFGXDZFrldov3T5wqeJSgQNWMgTkuV4CA9C+gVwv2guadkB7h5PuFyJxaLLbK6vl2VAUltpA==
+
+"@r2wc/react-to-web-component@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@r2wc/react-to-web-component/-/react-to-web-component-2.0.2.tgz#695a077a231c108226d1b3cf69b43dbcfe607c6c"
+  integrity sha512-HxgWXh6aipgvZ7l31m+AN0mM8KI5jkiCEBnSMBl/UKibVrhFgtsumL8fmLd5/q+OHBJKK0w4e5sAmzY1yu8dpA==
+  dependencies:
+    "@r2wc/core" "^1.0.0"
+
 "@rollup/plugin-babel@^5.2.0":
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-babel/-/plugin-babel-5.3.1.tgz#04bc0608f4aa4b2e4b1aebf284344d0f68fda283"
