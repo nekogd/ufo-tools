@@ -1,16 +1,44 @@
 import { FC } from 'react';
-import { Box, ThemeProvider } from '@mui/material';
-import { theme } from '../theme/theme';
+import { Box, Typography } from '@mui/material';
 import { BannerType } from '../types/types';
+import { usePromoBannerQuery } from '../hooks/use-promo-banner.query';
 
 type PropsType = BannerType;
 
-export const Banner: FC<PropsType> = ({ text = 'banner', backgroundColor }) => {
-  console.log(backgroundColor);
-  console.log(text);
+export const Banner: FC<PropsType> = ({ position = 'top', text = 'banner', backgroundColor, textAlign }) => {
+  const { data } = usePromoBannerQuery();
+  console.log('data from usePromoBannerQuery', data);
+
+  const variableStyles = (...styles: any) => {
+    const result = {};
+    for (const style of styles) {
+      for (const key in style) {
+        if (style[key] !== undefined) {
+          // @ts-ignore
+          result[key] = style[key];
+        }
+      }
+    }
+    return result;
+  };
+
+  const fixedStyles = {
+    position: 'fixed',
+    width: '100%',
+    left: 0,
+    right: 0,
+    [position]: 0,
+    minHeight: 24,
+  };
+
+  const containerStyles = {
+    ...fixedStyles,
+    ...variableStyles({ backgroundColor: backgroundColor, textAlign: textAlign }),
+  };
+
   return (
-    <ThemeProvider theme={theme}>
-      <Box sx={{ background: backgroundColor ? backgroundColor : theme.palette.common.black }}>{text}</Box>
-    </ThemeProvider>
+    <Box sx={containerStyles}>
+      <Typography>{text}</Typography>
+    </Box>
   );
 };

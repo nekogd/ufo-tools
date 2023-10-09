@@ -8,6 +8,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.11",
     "@r2wc/react-to-web-component": "^2.0.2",
+    "@tanstack/react-query": "^4.35.7",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -16,6 +17,8 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "gh-pages": "^6.0.0",
+    "graphql": "^16.8.1",
+    "graphql-request": "^6.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -50,6 +53,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "prettier": "3.0.3"
   }
 }
