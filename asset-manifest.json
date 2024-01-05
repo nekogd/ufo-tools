@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/ufo-tools/static/css/main.c7ec3132.css",
-    "main.js": "/ufo-tools/static/js/main.6c3fa446.js",
+    "main.js": "/ufo-tools/static/js/main.0a1f2b75.js",
     "index.html": "/ufo-tools/index.html",
     "main.c7ec3132.css.map": "/ufo-tools/static/css/main.c7ec3132.css.map",
-    "main.6c3fa446.js.map": "/ufo-tools/static/js/main.6c3fa446.js.map"
+    "main.0a1f2b75.js.map": "/ufo-tools/static/js/main.0a1f2b75.js.map"
   },
   "entrypoints": [
     "static/css/main.c7ec3132.css",
-    "static/js/main.6c3fa446.js"
+    "static/js/main.0a1f2b75.js"
   ]
 }
