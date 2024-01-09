@@ -5,6 +5,8 @@ import { BannerWithProviders } from './components/banner-with-providers';
 
 const BannerWC = r2wc(BannerWithProviders, {
   props: {
+    id: 'string',
+    type: 'string',
     position: 'string',
     text: 'string',
     backgroundColor: 'string',

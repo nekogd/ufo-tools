@@ -7,16 +7,11 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 type PropsType = BannerType;
 const queryClient = new QueryClient();
-export const BannerWithProviders: FC<PropsType> = ({
-  position = 'top',
-  text = 'banner',
-  backgroundColor,
-  textAlign,
-}) => {
+export const BannerWithProviders: FC<PropsType> = (props) => {
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider theme={theme}>
-        <Banner textAlign={textAlign} position={position} text={text} backgroundColor={backgroundColor} />
+        <Banner {...props} />
       </ThemeProvider>
     </QueryClientProvider>
   );
