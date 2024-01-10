@@ -1,4 +1,5 @@
 export type BannerButtonType = {
+  position: 'left' | 'right';
   text: string;
   link?: string;
   action?: () => null;
@@ -7,6 +8,11 @@ export type BannerButtonType = {
   color?: string;
   fontSize?: string;
   border?: string;
+  px?: string;
+  py?: string;
+  minHeight?: string;
+  minWidth?: string;
+  margin?: string;
 };
 
 export type BannerType = {
@@ -21,6 +27,7 @@ export type BannerType = {
   margin?: string;
   link?: string;
   button?: BannerButtonType;
+  btnClickHandler?: () => void;
   border?: string;
   minHeight?: string;
   maxWidth?: string;

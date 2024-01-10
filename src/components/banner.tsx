@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import { BannerType } from '../types/types';
 import { usePromoBannerQuery } from '../hooks/use-promo-banner.query';
 
@@ -35,7 +35,23 @@ import { usePromoBannerQuery } from '../hooks/use-promo-banner.query';
 
 type PropsType = BannerType;
 
-export const Banner: FC<PropsType> = ({ id, type, position = 'top', text = 'banner', backgroundColor, textAlign }) => {
+export const Banner: FC<PropsType> = ({
+  id,
+  type,
+  position = 'top',
+  title,
+  text = 'banner',
+  backgroundImage,
+  backgroundColor,
+  textAlign,
+  margin,
+  link,
+  button,
+  btnClickHandler,
+  minHeight,
+  maxWidth,
+  fontSize,
+}) => {
   const { data, isLoading } = usePromoBannerQuery();
   console.log('data from usePromoBannerQuery', data);
 
@@ -72,12 +88,14 @@ export const Banner: FC<PropsType> = ({ id, type, position = 'top', text = 'bann
       {data ? (
         <Box sx={containerStyles}>
           <Typography>{text}</Typography>
+          <Button onClick={btnClickHandler}>button</Button>
         </Box>
       ) : null}
     </>
   ) : (
     <Box sx={containerStyles}>
       <Typography>{text}</Typography>
+      <Button onClick={btnClickHandler}>button</Button>
     </Box>
   );
 };
